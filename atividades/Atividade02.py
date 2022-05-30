@@ -21,7 +21,6 @@ p3 = {
 
 TESTE = False
 pessoas = [p1, p2, p3]
-
 results = []
 
 for pessoa in pessoas:
