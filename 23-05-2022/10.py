@@ -23,7 +23,7 @@ def TriangleType(a, b, c):
     elif a == b and b == c:
         return 'Triangulo Equilatero'
 
-    elif a != b and b != c:
+    elif a != b != c != a:
         return 'Triângulo escaleno'
     
     else:
