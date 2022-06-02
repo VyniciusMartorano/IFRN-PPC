@@ -9,7 +9,6 @@ Lembrando que todos os lados devem ser positivos e que:
 |𝑎 − 𝑏| < 𝑐 < 𝑎 + b
 """
 
-
 def TriangleType(a, b, c):
     eq1 = + (b - c) < a and a < b + c
     eq2 = + (a - c) < b and b < a + c

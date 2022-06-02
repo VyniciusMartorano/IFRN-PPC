@@ -10,10 +10,10 @@ def VerificaTriangulo(l1, l2, l3):
     if l1 < 0 or l2 < 0 or l3 < 0:
         return 'Todos os lados devem ser positivos'
         
-    if (l1 + l2 + l3) != 180:
+    elif (l1 + l2 + l3) != 180:
         return 'A soma dos angulos internos tem que ser 180'
 
-    if l1 < 90 and l2 < 90 and l3 < 90:
+    elif l1 < 90 and l2 < 90 and l3 < 90:
         return 'Triangulo acutângulo'
     
     elif l1 == 90 or l2 == 90 or l3 == 90:
