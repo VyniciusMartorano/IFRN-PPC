@@ -6,25 +6,21 @@ Triângulo obtusângulo ......................: possui um ângulo obtuso, maior 
 """
 
 
-def VerificaTriangulo(l1, l2, l3):
-    if l1 < 0 or l2 < 0 or l3 < 0:
-        return 'Todos os lados devem ser positivos'
-        
-    elif (l1 + l2 + l3) != 180:
-        return 'A soma dos angulos internos tem que ser 180'
-
-    elif l1 < 90 and l2 < 90 and l3 < 90:
-        return 'Triangulo acutângulo'
-    
-    elif l1 == 90 or l2 == 90 or l3 == 90:
-        return 'Triangulo retângulo'
-
-    elif l1 > 90 or l2 > 90 or l3 > 90:
-        return 'Triângulo obtusângulo'
-
-
 l1 = int(input('Lado 1: '))
 l2 = int(input('Lado 2: '))
 l3 = int(input('Lado 3: '))
 
-print(VerificaTriangulo(l1, l2, l3))
+if l1 < 0 or l2 < 0 or l3 < 0:
+    print('Todos os lados devem ser positivos')
+    
+elif (l1 + l2 + l3) != 180:
+    print('A soma dos angulos internos tem que ser 180')
+
+elif l1 < 90 and l2 < 90 and l3 < 90:
+    print('Triangulo acutângulo')
+
+elif l1 == 90 or l2 == 90 or l3 == 90:
+    print('Triangulo retângulo')
+
+elif l1 > 90 or l2 > 90 or l3 > 90:
+    print('Triângulo obtusângulo')
