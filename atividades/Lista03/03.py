@@ -3,22 +3,16 @@
 o valor informado.
 """
 
-
-def primo(num):
-    if num > 1:
-        if num == 2:
-            print(f'{num}')
-            
-        for i in range(2,num):
-            if (num % i) == 0:
-                print(f'{num} NÃO é primo')
+num2 = int(input('Digite um valor inteiro: '))
+cont = 1
+while cont <= num2:
+    num = cont
+    if num > 1:    
+        i = 2
+        while i < num: 
+            if num % i == 0:
                 break
-            else:
-                print(f'{num} é um numero primo')
-                break
-    elif num == 1:
-        print('O numero não é primo')
-    else:
-        print(f'Digite um numero inteiro positivo')
-
-primo(2)
+            i += 1
+        else:
+            print(f'{num} É PRIMO')
+    cont += 1

@@ -4,34 +4,59 @@ um saque em um terminal de caixa eletrônico) e que calcule a quantidade de céd
 50,00, R$ 20,00, R$ 10,00, R$ 5,00 e R$ 2,00 e de moedas de R$ 1,00, R$ 0,50, R$ 0,25, R$ 0,10, R$
 0,05 e R$ 0,01. 
 """
-#round é pra arredondar pra baixo
 
-valor = 146
+valor = float(input('Digite um valor para saque: '))
 
-valorParcial = valor
+total = valor
+parcialValue = 100
+totCed = 0
 
-if valorParcial >= 100:
-    notasDeCem = (valorParcial / 100)
-    print(f'{notasDeCem} Nota(s) de R$100.')
-    valorParcial -= (notasDeCem * 100)
+while True:
+    if total >= parcialValue:
+        total -= parcialValue
+        totCed += 1
+    else:
+        if totCed > 0:
+            if parcialValue >= 1:
+                print(f'Total de {totCed} cedulas de R${parcialValue}')
+            else:
+                print(f'Total de {totCed} moedas de {parcialValue} centavos')
 
-if valorParcial >= 50:
-    notasDeCinquenta = round(valorParcial / 50)
-    print(f'{notasDeCinquenta} Nota(s) de R$50.')
-    valorParcial -= (notasDeCinquenta * 50)
+        if parcialValue == 100:
+            parcialValue = 50
 
-if valorParcial >= 10:
-    notasDeDez = round(valorParcial / 10)
-    print(f'{notasDeDez} Nota(s) de R$10.')
-    valorParcial -= (notasDeDez * 10)
+        elif parcialValue == 50:
+            parcialValue = 20
 
-if valorParcial >= 5:
-    notasDeCinco = round(valorParcial / 5)
-    print(f'{notasDeCinco} Nota(s) de R$5.')
-    valorParcial -= (notasDeCinco * 5)
+        elif parcialValue == 20:
+            parcialValue = 10
 
-if valorParcial >= 1:
-    notasDeUm = round(valorParcial / 1)
-    print(f'{notasDeUm} Nota(s) de R$1.')
-    valorParcial -= (notasDeUm * 1)
+        elif parcialValue == 10:
+            parcialValue = 5
 
+        elif parcialValue == 5:
+            parcialValue = 2
+
+        elif parcialValue == 2:
+            parcialValue = 1
+
+        elif parcialValue == 1:
+            parcialValue = 1 / 2
+
+        elif parcialValue == 1 / 2:
+            parcialValue = 1 / 4
+
+        elif parcialValue == 1 / 4:
+            parcialValue = 1 / 10
+        
+        elif parcialValue == 1 / 10:
+            parcialValue = 1 / 20
+        
+        elif parcialValue == 1 / 20:
+            parcialValue = 1 / 100
+
+        totCed = 0
+        if total == 0 or total < 1 / 100:
+            break
+
+########
