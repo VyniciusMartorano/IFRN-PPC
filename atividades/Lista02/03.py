@@ -10,7 +10,7 @@ cat1 = int(input('Digite o valor do cateto 1: '))
 cat2 = int(input('Digite o valor do cateto 2: '))
 
 
-if cat1 < 0 or cat2 < 0:
+if cat1 <= 0 or cat2 <= 0:
     print('Os catetos precisam ser positivos')
 else:
     hipo = (cat1 ** 2 + cat2 ** 2) ** (1 / 2)

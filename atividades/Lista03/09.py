@@ -13,3 +13,4 @@ while True:
     elif num == 0:
         print(f'A soma dos numeros digitados é {soma}')
         break
+
