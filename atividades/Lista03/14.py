@@ -15,5 +15,39 @@ Deseja processar mais um ano? (S/N)
 InvestimentoMensal
 RendimentoMensal
 """
+cont = 0
+total = 0
+cache = 0
+aplicacaoInicial = 100
+taxaMensal = 1 
+while True:
 
+    taxaMensal /= 100
+    aplicacaoMensal = aplicacaoInicial
 
+    if cont == 0:
+        ...
+        
+    else:
+        continuar = input('Deseja processar mais um ano? (S/N) ')
+        if continuar in 'sS':
+            cont = 0
+            ...
+        elif continuar in 'nN':
+            break
+        else:
+            print('Opção inválida')
+            continue
+
+    while cont < 12:
+        if cont == 0:
+            total = aplicacaoInicial
+        else:
+            total += (total * taxaMensal)
+        
+        cont += 1
+        cache += total
+        print(total)
+
+    print(f'Saldo de investimento após 1 ano: {cache}')
+    
