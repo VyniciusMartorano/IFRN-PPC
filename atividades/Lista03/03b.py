@@ -1,4 +1,11 @@
-num1 = int(input('Digite um valor: '))
+
+while True:
+    num1 = int(input('Digite um valor: '))
+    if num1 <= 0:
+        print('Digite um valor inteiro positivo')
+        continue
+    break
+
 print('Os numeros primos serão exibidos abaixo: ')
 
 currentNum = num1 + 1

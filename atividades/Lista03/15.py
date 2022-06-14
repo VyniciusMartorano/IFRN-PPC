@@ -5,15 +5,6 @@ https://pt.wikipedia.org/wiki/Número_triangular).
 Faça um programa que solicite ao usuário um número inteiro positivo e informe se ele é (ou não)
 triangular, de acordo com a definição
 """
-
-"""
-vitor
-ordAtual = 3
-ordPassada = ordAtual - 1
-
-form = n * (n + 1) / 2
-"""
-
 """
 numero anterior + termo atual
 
@@ -21,18 +12,13 @@ t_5 = 15
 t_6 = 6 + t_5 = 21
 """
 
-"""
-termoDesejado = 15
-ordemDesejado = 6
+while True:
+    termoDesejado = int(input('Digite um número para saber se é triangular: '))
+    if termoDesejado < 0:
+        print('Digite um valor inteiro maior ou igual a zero')
+        continue
+    break
 
-termo = 15
-ordem = 5
-
-t = (ordem * (ordem + 1) / 2) + ordemDesejado
-
-print(f'Ordem: {ordemDesejado}\nTermo: {t}')
-"""
-termoDesejado = int(input('Digite um número para saber se é triangular: '))
 cont = 0
 
 triangular = 0

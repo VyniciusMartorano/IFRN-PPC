@@ -14,40 +14,38 @@ Deseja processar mais um ano? (S/N)
 
 InvestimentoMensal
 RendimentoMensal
+
+1- mes  1268.25
 """
+
+aplicacaoInicial = float(input('Digite a aplicação inicial: '))
+taxaMensal = float(input('Digite a taxa de juros: ')) / 100
+
 cont = 0
 total = 0
-cache = 0
-aplicacaoInicial = 100
-taxaMensal = 1 
 while True:
-
-    taxaMensal /= 100
-    aplicacaoMensal = aplicacaoInicial
-
     if cont == 0:
+        limite = 12
         ...
         
     else:
         continuar = input('Deseja processar mais um ano? (S/N) ')
         if continuar in 'sS':
-            cont = 0
+            limite += 12
             ...
         elif continuar in 'nN':
             break
         else:
             print('Opção inválida')
             continue
-
-    while cont < 12:
-        if cont == 0:
-            total = aplicacaoInicial
-        else:
-            total += (total * taxaMensal)
-        
-        cont += 1
-        cache += total
-        print(total)
-
-    print(f'Saldo de investimento após 1 ano: {cache}')
     
+    while cont < limite:
+        if cont == 0:
+            taxa = aplicacaoInicial
+        else:
+            taxa += (taxa * taxaMensal)
+        cont += 1
+        total += taxa
+
+    print(f'Rendimento mensal: {taxaMensal * 100}%')
+    print(f'Saldo de investimento após {int(cont / 12)} ano(s): R${total:.2f}')

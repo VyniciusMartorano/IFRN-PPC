@@ -13,42 +13,40 @@ c. Calcular a soma dos elementos dessa P.A.;
 d. Solicitar um outro valor inteiro correspondente a enésima posição de um elemento da P.A. e exibir o valor desse elemento.
 """
 
-r = int(input('Digite a Razão da P.A: '))
+razao = int(input('Digite a Razão da P.A: '))
 while True:
-    n = int(input('Digite o numero de termos da P.A: '))
-    if n <= 0:
+    tamPA = int(input('Digite o numero de termos da P.A: '))
+    if tamPA <= 0:
         print('Digite um valor inteiro positivo')
         continue
     else:
         break
     
 a1 = int(input('Digite o valor do A1: '))
+while True:
+    enes = int(input('Digite qual posição deseja buscar na P.A: '))
+    if enes <= 0:
+        print('Digite um valor inteiro positivo')
+        continue
+    break
 
-enes = int(input('Digite qual posição deseja buscar na P.A: '))
 cont = 0
 
-while cont < n:
-    print(a1 + r*cont)
+while cont < tamPA:
+    print(a1 + razao * cont)
     cont += 1
 
 cont = 0
 while cont <= enes:
-    
-    enesima = a1 + r * cont
-
+    enesima = a1 + razao * cont
     if cont == enes - 1:
         print(f'O valor da posição {enes} é {enesima}')
     cont += 1
     
+if razao > 0: print('A P.A é crescente')
 
-if r > 0:
-    print('A P.A é crescente')
+elif razao < 0: print('A P.A é decrescente')
 
-elif r < 0:
-    print('A P.A é decrescente')
+elif razao == 0: print('A P.A é constante')
 
-elif r == 0:
-    print('A P.A é constante')
-
-
-print(f'Soma: {(n * (a1 + (a1 + ((n-1)*r))))/2}')    
+print(f'Soma: {(tamPA * (a1 + (a1 + ((tamPA-1)*razao))))/2}')    

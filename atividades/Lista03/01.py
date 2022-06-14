@@ -2,8 +2,12 @@
 Fazer um programa que solicite ao usuário um valor inteiro positivo e gere o seu valor em binário.
 ATENÇÃO: Deverá ser utilizada divisões inteiras para a solução.
 """
-
-num = int(input('Digite um valor para seu binario: '))
+while True:
+    num = int(input('Digite um valor para seu binario: '))
+    if num < 0:
+        print('Digite um numero inteiro positivo')
+        continue
+    break
 
 resta = 0
 binario = ''

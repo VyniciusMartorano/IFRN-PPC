@@ -37,7 +37,13 @@ while True:
     else:
         break
 
-enes = int(input('Digite qual posição deseja buscar na P.G: '))
+while True:
+    enes = int(input('Digite qual posição deseja buscar na P.G: '))
+    if enes <= 0:
+        print('Digite um valor inteiro positivo')
+        continue
+    break
+
 cont = 0
 
 while cont < n:
@@ -47,26 +53,19 @@ while cont < n:
 
 cont = 0
 while cont <= enes:
-    
     enesima = a1*(r**cont)
-
     if cont == enes - 1:
         print(f'O valor da posição {enes} é {enesima}')
     cont += 1
     
 
-if r > 0:
-    print('A P.G é crescente')
+if r > 0: print('A P.G é crescente')
 
-elif a1 != 0 and r < 0:
-    print('A P.G é oscilante')
+elif a1 != 0 and r < 0: print('A P.G é oscilante')
 
-elif r < 0:
-    print('A P.G é decrescente')
+elif r < 0: print('A P.G é decrescente')
 
-elif r == 0:
-    print('A P.G é constante')
-
+elif r == 0: print('A P.G é constante')
 
 print(f'Soma: {(a1 * ((r**n)-1))/(r-1)}')    
 

@@ -1,5 +1,9 @@
-x = int(input('Digite um numero inteiro:'))
-
+while True:
+    x = int(input('Digite um numero inteiro:'))
+    if x <= 0:
+        print('Digite um valor inteiro positivo')
+        continue
+    break
 
 if x > 0:
     cont = 0

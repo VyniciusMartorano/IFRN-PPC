@@ -11,6 +11,6 @@ while True:
     if num > 0:
         soma += num
     elif num == 0:
-        print(f'A soma dos numeros digitados é {soma}')
+        print(f'A soma dos numeros positivos digitados é {soma}')
         break
 
