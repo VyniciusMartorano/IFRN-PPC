@@ -14,7 +14,7 @@ exibir o valor desse elemento
 
 """
 while True:
-    r = int(input('Digite a Razão da P.G: '))
+    r = float(input('Digite a Razão da P.G: '))
     if r == 0:
         print('A razão não pode ser 0')
         continue
@@ -59,14 +59,10 @@ while cont <= enes:
     cont += 1
     
 
-if r > 0: print('A P.G é crescente')
-
+if r > 0 and r < 1: print('A P.G é decrescente')
+elif r > 0: print('A P.G é crescente')
 elif a1 != 0 and r < 0: print('A P.G é oscilante')
-
-elif r < 0: print('A P.G é decrescente')
-
 elif r == 0: print('A P.G é constante')
-
 print(f'Soma: {(a1 * ((r**n)-1))/(r-1)}')    
 
 

@@ -27,7 +27,6 @@ while True:
     if cont == 0:
         limite = 12
         ...
-        
     else:
         continuar = input('Deseja processar mais um ano? (S/N) ')
         if continuar in 'sS':
