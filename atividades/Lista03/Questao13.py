@@ -18,6 +18,7 @@ hora = minuto // 60
 segundo = tempoSecs % 60
 time = f'{hora}:{minuto}:{segundo}'
 
+
 print(f'Massa final: {massaInicial}')
 
 print(f'Tempo de decomposicao: {time}')

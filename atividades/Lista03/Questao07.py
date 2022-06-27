@@ -13,13 +13,10 @@ d. Solicitar um outro valor inteiro correspondente a enésima posição de um el
 exibir o valor desse elemento
 
 """
-while True:
-    r = float(input('Digite a Razão da P.G: '))
-    if r == 0:
-        print('A razão não pode ser 0')
-        continue
-    else:
-        break
+
+
+r = float(input('Digite a Razão da P.G: '))
+
 
 while True:
     n = int(input('Digite o numero de termos da P.G: '))
@@ -44,25 +41,37 @@ while True:
         continue
     break
 
-cont = 0
+if r == 1:
+    print(f'Essa PG é constante e todos os valores são iguais a {a1}')
+    soma = 0
+    cont = 0
+    while cont < n:
+        print(a1 * (r ** cont))
+        soma += a1 * (r ** cont)
+        cont += 1
+    print(f'Soma: {soma}')
 
-while cont < n:
-    print(a1 * (r ** cont))
-    cont += 1
-    
+elif r == 0 and a1 == 0:
+    cont = 0
+    while cont < n:
+        print(a1 * (r ** cont))
+        cont += 1
+    print('PG é constante e todos os valores são iguais a 0')
 
-cont = 0
-while cont <= enes:
-    enesima = a1*(r**cont)
-    if cont == enes - 1:
-        print(f'O valor da posição {enes} é {enesima}')
-    cont += 1
-    
-
-if r > 0 and r < 1: print('A P.G é decrescente')
-elif r > 0: print('A P.G é crescente')
-elif a1 != 0 and r < 0: print('A P.G é oscilante')
-elif r == 0: print('A P.G é constante')
-print(f'Soma: {(a1 * ((r**n)-1))/(r-1)}')    
+else:
+    cont = 0
+    while cont < n:
+        print(a1 * (r ** cont))
+        cont += 1
+    cont = 0
+    while cont <= enes:
+        enesima = a1*(r**cont)
+        if cont == enes - 1:
+            print(f'O valor da posição {enes} é {enesima}')
+        cont += 1
+    if a1 < 0 and r > 0: print('A P.G é decrescente')
+    elif r > 0 and a1 > 0: print('A P.G é crescente')
+    elif a1 != 0 and r < 0: print('A P.G é oscilante')
+    print(f'Soma: {(a1 * ((r**n)-1))/(r-1)}')    
 
 

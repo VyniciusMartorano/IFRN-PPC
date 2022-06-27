@@ -26,7 +26,8 @@ while cont < 5:
             break
 
     while True:
-        sexo = str(input(f'Digite o sexo da {cont}ª Pessoa\n[H]Masculino\n[M]Feminino\n: '))
+        sexo = str(
+            input(f'Digite o sexo da {cont}ª Pessoa\n[H]Masculino\n[M]Feminino\n: ')).upper()
         if sexo == 'M' or sexo == 'H':
             break
         else:
@@ -42,14 +43,12 @@ while cont < 5:
     elif sexo == 'H':
         hom += 1
         mediaHom += idade
-    
+
+
 mediaGeral = mediaGeral / 5
 mediaHom = mediaHom / hom
 mediaMul = mediaMul / mul
 
-print(f'A média geral é de {mediaGeral} anos')
-print(f'A média das mulheres é de {mediaMul} anos')
-print(f'A média dos homens é de {mediaHom} anos')
-
-
-
+print(f'A média geral é de {mediaGeral:.1f} anos')
+print(f'A média das mulheres é de {mediaMul:.1f} anos')
+print(f'A média dos homens é de {mediaHom:.1f} anos')
