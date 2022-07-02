@@ -1,11 +1,3 @@
-"""
-Faça um programa que emule o jogo da forca. O programa terá uma constante chamada
-PALAVRA_CHAVE que armazenara a palavra a ser descoberta. O programa deverá solicitar ao usuário
-as letras, à medida que as letras forem sendo digitadas o programa irá exibir se o usuário acertou ou
-não. O jogo deverá considerar maiúsculas e minúsculas iguais. O jogador poderá errar 6 vezes antes de
-ser enforcado
-"""
-
 PALAVRA_CHAVE = 'MAXARANGUAPE'.upper()
 tamString = '_' * len(PALAVRA_CHAVE)
 string = [*tamString]
@@ -39,7 +31,6 @@ while erro < 6:
         erro += 1
         print(f'Você ainda tem {6 - erro} Tentativas')
     
-
 if acerto == len(PALAVRA_CHAVE):
     print(f'Você venceu utilizando {acerto + erro} tentativas')
 else:
