@@ -3,7 +3,8 @@ tamString = '_' * len(PALAVRA_CHAVE)
 string = [*tamString]
 acerto = 0
 erro = 0
-
+key = False
+print(f'A palavra tem {len(PALAVRA_CHAVE)} letras')
 while erro < 6:
     user = input('Digite uma letra para tentar descobrir a palavra: ').upper()
     if not len(user.strip()):
@@ -15,6 +16,9 @@ while erro < 6:
         continue
 
     if user in PALAVRA_CHAVE:
+        if user == PALAVRA_CHAVE:
+            key = True
+            break
         cont = 0
         acerto += 1
         if acerto == len(PALAVRA_CHAVE):
@@ -31,7 +35,7 @@ while erro < 6:
         erro += 1
         print(f'Você ainda tem {6 - erro} Tentativas')
     
-if acerto == len(PALAVRA_CHAVE):
+if acerto == len(PALAVRA_CHAVE) or key == True:
     print(f'Você venceu utilizando {acerto + erro} tentativas')
 else:
     print(f'Você perdeu!\nA palavra correta era {PALAVRA_CHAVE}')

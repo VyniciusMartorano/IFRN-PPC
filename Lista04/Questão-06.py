@@ -1,4 +1,4 @@
-palavra = 'NATAL'
+palavra = input('Digite a palavra: ')
 
 cont = 0
 while cont < len(palavra):

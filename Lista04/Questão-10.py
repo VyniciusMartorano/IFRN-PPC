@@ -19,7 +19,7 @@ Ao final, indique:
 
 movimentos = input('Digite os movimentos para o robô executar: ').upper().strip()
 x = float(input('Digite a posição inicial no eixo X: '))
-y = float(input('Digite a posição inicial no eixo X: '))
+y = float(input('Digite a posição inicial no eixo Y: '))
 cont = 0
 movValidos =  'UDRLONEW'
 movValidosUser = ''
@@ -55,10 +55,13 @@ while cont < len(movimentos):
     cont += 1
 
 quadrFinal = ''
-if x > 0 and y > 0: quadrFinal = '1º Quadrante'
-elif x < 0 and y > 0: quadrFinal = '2º Quadrante'
-elif x < 0 and y < 0: quadrFinal = '3º Quadrante'
-elif x > 0 and y < 0: quadrFinal = '4º Quadrante'
+if x > 0 and y > 0: quadrFinal = 'no 1º Quadrante'
+elif x < 0 and y > 0: quadrFinal = 'no 2º Quadrante'
+elif x < 0 and y < 0: quadrFinal = 'no 3º Quadrante'
+elif x > 0 and y < 0: quadrFinal = 'no 4º Quadrante'
+elif x == 0 and y != 0: quadrFinal = 'sob o eixo Y'
+elif x != 0 and y == 0: quadrFinal = 'sob o eixo X'
+else: quadrFinal = 'na origem do plano cartesiano'
 
 print(f'A posição inicial do robô era {posIni}')
 print(f'A posição final do robô: ({x, y})')
