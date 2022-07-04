@@ -8,5 +8,10 @@ frase = input('Digite a frase: ')
 palavraAnt = input('Digite a palavra a ser trocada: ')
 palavraNov = input('Digite a nova palavra: ')
 
-
-print(f'A nova frase: {frase.replace(palavraAnt, palavraNov)}')
+print(f'Frase: {frase}')
+print(f'Palavra antiga: {palavraAnt}')
+print(f'Palavra nova: {palavraNov}')
+if palavraAnt in frase:
+    print(f'A nova frase: {frase.replace(palavraAnt, palavraNov)}')
+else:
+    print(f'A palavra {palavraAnt} não existe na frase')
