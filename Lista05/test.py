@@ -1,16 +1,13 @@
-#15
+import math 
 
-n = 6
 
-i = 2
-j = 3
 
-result = '0, '
-for c in range(1,n):
-    if str(i * c) in result:
-        result += f'{j * c}, '
-    elif str(j * c) in result:
-        result += f'{i * c}, '
-    else:
-        result += f'{i * c}, {j * c}, '
-print(result)
+numero = abs(int(input('Digite o valor: ')))
+x = 1 if numero == 0 else math.floor(math.log10(numero)) + 1
+print(f'O numero {numero} tem {x} digito(s)')
+
+
+
+
+    
+
