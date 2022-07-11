@@ -4,8 +4,8 @@ y = float(input('Digite a posição inicial no eixo Y: '))
 movValidos =  'UDRLONEW'
 movValidosUser = ''
 quadrInicial = ''
-posIni = f'({x},{y})'
-
+posIni = f'({x},{y})'              
+             
 if x > 0 and y > 0: quadrInicial = 'no 1º Quadrante'
 elif x < 0 and y > 0: quadrInicial = 'no 2º Quadrante'
 elif x < 0 and y < 0: quadrInicial = 'no 3º Quadrante'

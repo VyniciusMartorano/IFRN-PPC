@@ -1,32 +1,14 @@
-n = 6
-
-i = 4
-j = 5
-
-result = ''
-#0,2,3,4,6,8.
-cont = 0
-
-for c in range(0, n):
-    multI = str(i * c)
-    multJ = str(j * c)
-    print(cont)
-    if cont == n:
-        break
-    if multI in result and multJ in result:
-        continue
-    elif multI in result and multJ not in result:
-        result += f'{multJ},'
-        cont += 1
-    elif multJ in result and multI not in result:
-        result += f'{multI},'
-        cont += 1
-    else:
-        if multI == multJ:
-            result += f'{multI},'
-            cont += 1
-            continue
-        result += f'{multI},{multJ},'
-        cont += 2
-
-print(result)
+n = int(input('Digite a quantidade de termos que deseja mostrar: '))
+i = int(input('Digite o primeiro número que deseja obter os múltiplos: '))
+j = int(input('Digite o segundo número que deseja obter os múltiplos: '))
+print(f'Os {n} primeiros múltiplos de {i} e {j} são: ')
+if i > 0 and j > 0 and n > 0:
+    mult = 0
+    termo = 0
+    while termo < n:
+        if mult % i == 0 or mult % j == 0:
+            print(mult)
+            termo += 1
+        mult += 1
+else:
+    print('Você não informou somente números maiores que 0 anteriormente.')
