@@ -3,9 +3,7 @@ from random import choice
 
 gabarito = []
 choices = ['A', 'B', 'C', 'D', 'E']
-alunos = ['Jõao', 'Pedro', 'Thiago', 'Yuri', 'Victor', 'Wagner', 'Paulo', 'Estevam', 'Oscar', 'Daniel o motoboy']
 registros = []
-
 for i in range(10):
     gabarito.append(choice(choices))
     registros.append([])

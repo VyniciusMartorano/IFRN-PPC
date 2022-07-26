@@ -5,14 +5,30 @@ número inteiro positivo de 4 dígitos e diga se esse número converge ou não p
 e, se convergir, em quantas interações ele converge.
 """
 
-num = '6174'
-
-soma = 0
-for n in num:
-    soma += int(n)
-
-
-if int(num) % soma == 0:
-    if 
-else:
-    print('O numero não converge para a constante de Kaprekar')
+n = str(input('Informe um número entre 0 e 10000: ')).strip()
+inicio = n
+cont = 0
+if len([*n]) <= 4 and int(n) > 0:
+    while n != '6174':
+        x1 = [*n]
+        x2 = [*n]
+        while len(x1) < 4 and len(x2) < 4:   #verificar se o número é menor que mil e adicionar os 0 antes e depois, até quando necessário
+            num = '0'
+            x1.append(num)
+            x2.insert(0, '0')
+        if x1[0] == x1[1] == x1[2] == x1[3]: #verificar se o número informado contém os 4 dígitos repetidos (1111, 2222, ...)
+            print(f'O número {n} não tem constante Kaprekar.')
+            break
+        x1.sort(reverse=True)
+        x2.sort()
+        maior = ''
+        menor = ''
+        for i in range(4):                   #concatenar os dígitos
+            maior += x1[i]
+            menor += x2[i]
+        res = int(maior) - int(menor)        #fazer a conta, transformando pra int
+        n = str(res)                         #voltando pra string para continuar o laço
+        cont += 1
+    if cont > 0:
+        print(f'O número {inicio} tem {cont} repetições até chegar a constante de Kaprekar, 6174')
+else: print('O número informado não pode ter mais que 4 dígitos (entre 0 e 10000).')
