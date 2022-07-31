@@ -13,8 +13,5 @@ for i in range(n):
     array.append(num)
     cont += 1
 
-
-if pos:
-    print(f'O valor {user} está localizado na posição {pos} da lista')
-else:
-    print('O valor não existe na lista')
+if pos: print(f'O valor {user} está localizado na posição {pos} da lista')
+else: print('O valor não existe na lista')

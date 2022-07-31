@@ -22,20 +22,7 @@ for i in range(n):
     array.append(num)
 
 print(f'Matriz gerada: {array}')
-print(f"""
-O NUMERO 0 APARECEU {qtd[0]}x
-O NUMERO 1 APARECEU {qtd[1]}x
-O NUMERO 2 APARECEU {qtd[2]}x
-O NUMERO 3 APARECEU {qtd[3]}x
-O NUMERO 4 APARECEU {qtd[4]}x
-O NUMERO 5 APARECEU {qtd[5]}x
-O NUMERO 6 APARECEU {qtd[6]}x
-O NUMERO 7 APARECEU {qtd[7]}x
-O NUMERO 8 APARECEU {qtd[8]}x
-O NUMERO 9 APARECEU {qtd[9]}x
-""")
 
-
-
-
+for i in range(0, 10):
+    print(f'O NUMERO {i} APARECEU {qtd[i]}x')
 
